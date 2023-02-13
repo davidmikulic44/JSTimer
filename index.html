@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://kit.fontawesome.com/a88ff6df1f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Timer</title>
+
+</head>
+<body>
+    <div class="header">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="label" id="label">
+            <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-moon"></i>
+            <div class="ball" id="ball">
+                <div class="ball2"></div>
+            </div>
+            
+        </label>
+    </div>
+
+    <div class="watch">
+        <div class="circle" id="circle">
+            <div class="time" id="time">
+                01:30:00
+            </div>
+        </div>
+        <input type="number" onchange="saveSeconds()" 
+        name="time-input" placeholder="minutes" id="time-input" 
+        min="1" max="6000" value="90" class="time-input"/>
+        <div class="controls" id="controls">
+            <button id="start-btn">
+                <i class="fa-solid fa-play" id="play-icon"></i>
+            </button>
+            <button id="pause-btn">
+                <i class="fa-solid fa-pause" id="pause-icon"></i>
+            </button>
+            <button id="reset-btn">
+                <i class="fa-solid fa-rotate-left" id="reset-icon"></i>
+            </button>
+        </div>
+        <script src="script.js"></script>
+    </div>
+    
+</body>
+</html> 
