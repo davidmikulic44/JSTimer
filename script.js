@@ -7,6 +7,8 @@ const timeText = document.getElementById('time');
 const timeInput = document.getElementById('time-input');
 const label = document.getElementById('label');
 const ball = document.getElementById('ball');
+const titleElement = document.getElementById('title');
+
 
 let seconds=5400;
 let interval=null;
@@ -58,6 +60,7 @@ function saveSeconds(){
     if(document.getElementById('time-input').value>6000){
         document.getElementById('time-input').value='90';
         timeElement.innerText=`${hrs(seconds)}:${mins(seconds)}:${secs(seconds)}`;
+        titleElement.innerText=`${hrs(seconds)}:${mins(seconds)}:${secs(seconds)}`;
         return;
     }
 
@@ -71,6 +74,8 @@ function saveSeconds(){
             seconds=secondsInput;
         pauseTimer();
         timeElement.innerText=`${hrs(seconds)}:${mins(seconds)}:${secs(seconds)}`;
+        titleElement.innerText=`${hrs(seconds)}:${mins(seconds)}:${secs(seconds)}`;
+    
     }
     
 }
@@ -81,6 +86,8 @@ function timer(){
     }
     
     timeElement.innerText=`${hrs(seconds)}:${mins(seconds)}:${secs(seconds)}`;
+    titleElement.innerText=`${hrs(seconds)}:${mins(seconds)}:${secs(seconds)}`;
+    
     if(seconds==0){
         pauseTimer();
         audio.play();
@@ -120,4 +127,6 @@ function resetTimer(){
     audio.pause();
     audio.currentTime=0;
     timeElement.innerText=`${hrs(seconds)}:${mins(seconds)}:${secs(seconds)}`;
+    titleElement.innerText=`${hrs(seconds)}:${mins(seconds)}:${secs(seconds)}`;
+    
 }
